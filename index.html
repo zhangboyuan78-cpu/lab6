@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>City Weather | Lab 6</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body data-weather="cloudy">
+  <main class="weather-card">
+    <header>
+      <p class="eyebrow">CCT 360 · LAB 6</p>
+      <h1>A little closer<br>to home.</h1>
+      <p class="intro">
+        Different cities. Different skies.
+        Discover the weather right now.
+      </p>
+    </header>
+
+    <section class="controls" aria-label="Weather controls">
+      <label for="city">Choose a city</label>
+      <div class="control-row">
+        <select id="city">
+          <option value="dongguan">Dongguan</option>
+          <option value="shenzhen">Shenzhen</option>
+          <option value="toronto">Toronto</option>
+        </select>
+        <button id="refresh" type="button">Refresh ↻</button>
+      </div>
+    </section>
+
+    <p id="status" role="status" aria-live="polite">
+      Loading weather…
+    </p>
+
+    <section id="weather" aria-label="Current weather" aria-busy="true">
+      <div class="weather-heading">
+        <div>
+          <h2 id="city-name">Dongguan</h2>
+          <p id="condition">Waiting for the sky…</p>
+        </div>
+        <span id="icon" aria-hidden="true">☁️</span>
+      </div>
+
+      <p id="temperature" class="temperature">—</p>
+
+      <dl class="details">
+        <div>
+          <dt>Feels like</dt>
+          <dd id="feels-like">—</dd>
+        </div>
+        <div>
+          <dt>Humidity</dt>
+          <dd id="humidity">—</dd>
+        </div>
+        <div>
+          <dt>Wind</dt>
+          <dd id="wind">—</dd>
+        </div>
+      </dl>
+
+      <p id="suggestion" class="suggestion">
+        Your weather-inspired suggestion will appear here.
+      </p>
+      <p id="updated" class="updated">No data loaded yet.</p>
+    </section>
+
+    <footer>
+      Weather data by
+      <a href="https://open-meteo.com/" target="_blank" rel="noopener noreferrer">
+        Open-Meteo
+      </a>.
+      Background and suggestions respond to the weather.
+    </footer>
+  </main>
+</body>
+</html>
